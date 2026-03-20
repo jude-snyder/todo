@@ -6,15 +6,17 @@ import { listCommnand } from "./src/list-command";
 const program = new Command();
 
 program
-.command("new")
-.argument("<task>")
-.description("Create a new task")
-.action(newCommand);
+    .command("new")
+    .argument("<task>")
+    .description("Create a new task")
+    .action(newCommand);
 
 program
-.command("done")
-.argument("<id>")
-.description("Mark a task as complete")
-.action(doneCommand);
+    .command("done")
+    .argument("<id>")
+    .description("Mark a task as complete")
+    .action(doneCommand);
 
 program.command("list").description("List all tasks").action(listCommnand);
+
+program.parse(process.argv);
