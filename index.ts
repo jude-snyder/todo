@@ -1,7 +1,7 @@
 import { Command } from "commander"
 import { newCommand } from "./src/new-command";
 import { doneCommand } from "./src/done-command";
-import { listCommnand } from "./src/list-command";
+import { listCommand } from "./src/list-command";
 
 const program = new Command();
 
@@ -17,6 +17,6 @@ program
     .description("Mark a task as complete")
     .action(doneCommand);
 
-program.command("list").description("List all tasks").action(listCommnand);
+program.command("list").description("List all tasks").action(listCommand);
 
 program.parse(process.argv);

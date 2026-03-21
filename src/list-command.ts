@@ -1,6 +1,6 @@
 import { readTasks } from "./read-tasks";
 
-export async function listCommnand(): Promise<void> {
+export async function listCommand(): Promise<void> {
     const tasks = await readTasks("./db.txt");
 
     if (tasks.length === 0) {
